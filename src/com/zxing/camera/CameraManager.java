@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-package com.zxing.camera;
 
+
+package com.zxing.camera;
+//在此类中修改相机扫描框的大小
 import java.io.IOException;
 
 import android.content.Context;
@@ -131,7 +133,7 @@ public final class CameraManager {
 
       //FIXME
  //     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-      //�Ƿ�ʹ��ǰ��
+      //�Ƿ�ʹ��ǰ��
 //      if (prefs.getBoolean(PreferencesActivity.KEY_FRONT_LIGHT, false)) {
 //        FlashlightManager.enableFlashlight();
 //      }
@@ -145,8 +147,12 @@ public final class CameraManager {
   public void closeDriver() {
     if (camera != null) {
       FlashlightManager.disableFlashlight();
+      
+      if(previewing)
+    	  camera.stopPreview();
       camera.release();
       camera = null;
+      previewing=false;
     }
   }
 

@@ -55,3 +55,4 @@ int string app_name 0x7f070001
 int string cancel 0x7f070003
 int string hello 0x7f070000
 int string scanBarCode 0x7f070002
+int string scan_text 0x7f070004
