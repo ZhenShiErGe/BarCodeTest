@@ -27,6 +27,7 @@ int color viewfinder_laser 0x7f050017
 int color viewfinder_mask 0x7f050018
 int drawable ic_launcher 0x7f020000
 int drawable navbar 0x7f020001
+int drawable qrcode_scan_line 0x7f020002
 int id auto_focus 0x7f060000
 int id btn_add_qrcode 0x7f060012
 int id btn_cancel_scan 0x7f06000e
