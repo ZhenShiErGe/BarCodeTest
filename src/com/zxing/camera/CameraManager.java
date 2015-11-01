@@ -43,7 +43,8 @@ public final class CameraManager {
   private static final int MIN_FRAME_WIDTH = 240;
   private static final int MIN_FRAME_HEIGHT = 240;
   private static final int MAX_FRAME_WIDTH = 480;
-  private static final int MAX_FRAME_HEIGHT = 360;
+//  private static final int MAX_FRAME_HEIGHT = 360;
+  private static final int MAX_FRAME_HEIGHT = 480;
 
   private static CameraManager cameraManager;
 
@@ -239,6 +240,12 @@ public final class CameraManager {
       } else if (height > MAX_FRAME_HEIGHT) {
         height = MAX_FRAME_HEIGHT;
       }
+      //测试---start----------
+      if(height<width)
+    	  width=height;
+      else if(height>width)
+    	  height=width;
+     // 测试---
       int leftOffset = (screenResolution.x - width) / 2;
       int topOffset = (screenResolution.y - height) / 2;
       framingRect = new Rect(leftOffset, topOffset, leftOffset + width, topOffset + height);
